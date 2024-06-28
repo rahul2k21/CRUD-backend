@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  /* background-color: #f5f6ff; */
+  background-color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container
+{
+  padding: 15px;
+  /* background-color: red; */
+  max-width: fit-content;
+  margin: 50px auto;
+
+}
+.btn{
+  border: none;
+  padding: 7px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn-add{
+  background-color: #194064;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.addContainer{
+  position: absolute;
+  background-color: rgba(0.0.0.0.2);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.addContainer form {
+  width: 420px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 35px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addContainer form label{
+  font-size: 18px;
+}
+
+.addContainer form input{
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+}
+.addContainer form button{
+  background-color: royalblue;
+  color: white;
+  font-weight: 500;
+  margin-top: 20px;
+
+}
+
+.close-btn{
+  margin-left: auto;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  /* background-color: rgb(243, 10,10); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid #000;
+  
+}
+
+.table-container{
+  margin-top: 40px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+border-radius: 7px;
+}
+
+
+.table-container table thead tr{
+  background-color: #f6de64d4;
+
+}
+.table-container table thead tr th,
+.table-container table tbody tr td{
+  min-width: 200px;
+  padding: 7px;
+  text-align: center;
+}
+.table-container table tbody tr td{
+  border-bottom: 1px solid #c9c5c2;
+}
+
+.btn-delete,.btn-edit{
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 0px 10px;
+}
+
+.btn-edit{
+  background-color: #e2f413;
+}
+.btn-delete{
+  background-color: #fa1717;
+  color: white;
 }
