@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(cors());
 app.use(express.json());
-const PORT = process.env.PORT || 2001;
+const PORT = process.env.PORT || 2002;
 
 // Schema
 
@@ -19,7 +19,7 @@ const SchemaData = mongoose.Schema(
     timestamps: true,
   }
 );
-const userModel = mongoose.model("user", SchemaData);
+const userModel = mongoose.model("rahuldb", SchemaData);
 
 // API Creation
 
@@ -82,7 +82,9 @@ app.delete("/delete/:id", async (req, res) => {
 // Node to MongoDB
 
 mongoose
-  .connect("mongodb://localhost:27017/crudoperation")
+  // .connect("mongodb://localhost:27017/crudoperation")
+  .connect("mongodb+srv://rahul:12345@crud.vtqjqr0.mongodb.net/backend")
+  
   .then(() => {
     console.log("Connected to DB");
     app.listen(PORT, () => console.log("Server is Running on PORT", PORT));
